@@ -40,7 +40,7 @@ if "last_action" not in st.session_state:
 # --------------------------
 with st.sidebar:
     st.title("ℹ️ About this Chatbot")
-    st.write("This is a simple **rule-based chatbot** built with Streamlit. You can:")
+    st.write("TESDA Cagayan chatbot** built with Streamlit. You can:")
     st.markdown("""
     - 👋 Greet the bot  
     - 📝 Create an account  
