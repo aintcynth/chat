@@ -55,8 +55,7 @@ with st.sidebar:
 # --------------------------
 # Top title
 # --------------------------
-st.markdown("<h1 style='text-align: center; color: #4CAF50;'><img src='TESDA LOGO.png' alt='Chatbot' width='50' height='50' />
-Rule-Based Chatbot</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #4CAF50;'><img src='TESDA LOGO.png' alt='Chatbot' width='50' height='50' /> Rule-Based Chatbot</h1>", unsafe_allow_html=True)
 st.write("Interact with the chatbot by typing or using quick action buttons below.")
 
 # --------------------------
