@@ -57,6 +57,7 @@ st.markdown(
         margin-right: auto;
         width: 70px;
         height: 70px;
+        background-repeat: no-repeat;
     }}
     </style>
     """,
