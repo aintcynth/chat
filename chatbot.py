@@ -40,11 +40,10 @@ st.markdown(
     /* Background image with some opacity */
     .stApp {{
         background-image: url('{TESDA_LOGO_URL}');
-        background-size: 150px 150px;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: center top;
+        background-position: center;
         background-attachment: fixed;
-        opacity: 0.1;
         z-index: -1;
     }}
     /* Override the background opacity only on background, not whole content */
