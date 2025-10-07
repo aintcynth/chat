@@ -2,7 +2,7 @@ import streamlit as st
 import time
 
 # Use the TESDA logo URL or local path here (replace with your path or URL)
-TESDA_LOGO_URL = "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/8fcf2e33-ebcc-4027-bf34-b983a6dccc0d.png"
+TESDA_LOGO_URL = "https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonape.com%2Ftesda-logo-logo-icon-svg-png.html&psig=AOvVaw3AJmXhbUwndbquBmMDG8LT&ust=1759896164117000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIC40-DjkpADFQAAAAAdAAAAABAE"
 
 # --------------------------
 # Simple rule-based chatbot function (unchanged)
