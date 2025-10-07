@@ -43,7 +43,7 @@ st.markdown(
         background-size: 500px;
         background-repeat: no-repeat;
         background-position: center;
-        z-index: -1;
+        z-index: +1;
     }}
     /* Override the background opacity only on background, not whole content */
     .stApp > .main {{
