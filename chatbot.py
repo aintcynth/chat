@@ -68,7 +68,8 @@ st.markdown(
 # Sidebar info + reset unchanged
 # --------------------------
 with st.sidebar:
-    st.title("<img src='{TESDA_LOGO_URL}' alt='TESDA Logo' class='top-logo'/>About this Chatbot")
+    st.markdown("<img src='{TESDA_LOGO_URL}' alt='TESDA Logo' class='top-logo'/>")
+    st.title("About this Chatbot")
     st.write("TESDA Cagayan chatbot** built with Streamlit. You can:")
     st.markdown("""
     - 👋 Greet the bot  
