@@ -63,10 +63,12 @@ with st.sidebar:
     - 📝 View courses  
     - 📞 Talk to a human agent  
     """)
-    if st.button("🔄 Reset Chat"):
-        st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA Chatbot. Type 'help' to see options.")]
-        st.session_state.last_action = None
-        st.experimental_rerun()
+def reset_chat():
+    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA Chatbot. Type 'help' to see options.")]
+    st.session_state.last_action = None
+
+if st.button("🔄 Reset Chat", on_click=reset_chat):
+    pass
 
 # --------------------------
 # Top title with fixed TESDA logo
