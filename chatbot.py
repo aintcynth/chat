@@ -73,8 +73,8 @@ with st.sidebar:
     st.write("TESDA Cagayan chatbot built with Streamlit. You can:")
     st.markdown("""
     - 👋 Greet the bot  
-    - 📝 Create an account  
-    - 📦 View courses  
+    - 👨‍🎓 Create an account  
+    - 📝 View courses  
     - 📞 Talk to a human agent  
     """)
     if st.button("🔄 Reset Chat"):
@@ -95,9 +95,9 @@ st.write("Interact with the chatbot by typing or using quick action buttons belo
 # Quick action buttons (safe pattern)
 # --------------------------
 col1, col2, col3 = st.columns(3)
-if col1.button("📝 Create Account"):
+if col1.button("👨‍🎓 Create Account"):
     st.session_state.last_action = "create account"
-if col2.button("📦 Courses"):
+if col2.button("📝 Courses"):
     st.session_state.last_action = "courses"
 if col3.button("📞 Talk to Agent"):
     st.session_state.last_action = "talk to agent"
