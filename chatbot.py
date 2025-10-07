@@ -20,6 +20,10 @@ def chatbot_response(user_message: str) -> str:
     else:
         return "❓ Sorry, I didn’t understand that. Please choose an option below or type 'help'."
 
+def reset_chat():
+    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA Chatbot. Type 'help' to see options.")]
+    st.session_state.last_action = None
+    
 # --------------------------
 # Page config and session
 # --------------------------
@@ -63,12 +67,6 @@ with st.sidebar:
     - 📝 View courses  
     - 📞 Talk to a human agent  
     """)
-def reset_chat():
-    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA Chatbot. Type 'help' to see options.")]
-    st.session_state.last_action = None
-
-if st.button("🔄 Reset Chat", on_click=reset_chat):
-    pass
 
 # --------------------------
 # Top title with fixed TESDA logo
@@ -82,13 +80,15 @@ st.write("Interact with the chatbot by typing or using quick action buttons belo
 # --------------------------
 # Quick action buttons (safe pattern)
 # --------------------------
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 if col1.button("👨‍🎓 Create Account"):
     st.session_state.last_action = "create account"
 if col2.button("📝 Courses"):
     st.session_state.last_action = "courses"
 if col3.button("📞 Talk to Agent"):
     st.session_state.last_action = "talk to agent"
+if col4.button("🔄 Reset Chat", on_click=reset_chat):
+    pass
 
 # --------------------------
 # Determine user_input:
