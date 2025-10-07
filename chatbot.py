@@ -37,19 +37,6 @@ if "last_action" not in st.session_state:
 st.markdown(
     f"""
     <style>
-    /* Background image with some opacity */
-    .stApp {{
-        background-image: url('{TESDA_LOGO_URL}');
-        background-size: 500px;
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: -1;
-    }}
-    /* Override the background opacity only on background, not whole content */
-    .stApp > .main {{
-        background-color: rgba(255, 255, 255, 0.95);
-        padding-top: 70px;
-    }}
     /* Style the top logo image */
     .top-logo {{
         display: block;
