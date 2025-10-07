@@ -86,7 +86,7 @@ with st.sidebar:
 # Top title with fixed TESDA logo
 # --------------------------
 st.markdown(
-    f"<h1 style='text-align: center; color: orange;'>Rule-Based Chatbot</h1>",
+    f"<h1 style='text-align: center; color: orange;'>TESDA Cagayan Chatbot</h1>",
     unsafe_allow_html=True,
 )
 st.write("Interact with the chatbot by typing or using quick action buttons below.")
