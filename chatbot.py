@@ -43,7 +43,7 @@ st.markdown(
         background-size: 500px;
         background-repeat: no-repeat;
         background-position: center;
-        z-index: +1;
+        z-index: -1;
     }}
     /* Override the background opacity only on background, not whole content */
     .stApp > .main {{
@@ -86,7 +86,7 @@ with st.sidebar:
 # Top title with fixed TESDA logo
 # --------------------------
 st.markdown(
-    f"<h1 style='text-align: center; color: orange;'>TESDA Cagayan Chatbot</h1>",
+    f"<img src='{TESDA_LOGO_URL}' alt='TESDA Logo' class='top-logo' style='display:block; margin-left:auto; margin-right:auto; width:100px; height:auto;'/><h1 style='text-align: center; color: orange;'>TESDA Cagayan Chatbot</h1>",
     unsafe_allow_html=True,
 )
 st.write("Interact with the chatbot by typing or using quick action buttons below.")
