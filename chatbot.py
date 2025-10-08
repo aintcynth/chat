@@ -79,15 +79,11 @@ with st.sidebar:
 # --------------------------
 # Top title with fixed TESDA logo
 # --------------------------
-st.markdown(
-    f"""
-    <div style='text-align: center;'>
-        <img src="{TESDA_LOGO_URL}" alt="TESDA Logo" style="width: 120px; height: auto; margin-bottom: 10px;" />
-        <h1 style="color: #1E90FF; margin-top: 0;">TESDA Cagayan Chatbot</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+col_logo, col_title, col_space = st.columns([1, 5, 1])
+with col_logo:
+    st.image(TESDA_LOGO_URL, width=120)
+with col_title:
+    st.markdown("## TESDA Cagayan Chatbot")
 st.write("Interact with the chatbot by typing or using quick action buttons below.")
 
 # --------------------------
