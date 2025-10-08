@@ -14,16 +14,22 @@ def reset_chat():
     
 def chatbot_response(user_message: str) -> str:
     user_message = (user_message or "").lower().strip()
+    
     if user_message in ["hi", "hello", "hey", "start"]:
         return "👋 Hello! How can I help you today?"
-    elif "create account" in user_message or user_message == "1":
-        return "👨‍🎓 You can create an account here: https://e-tesda.gov.ph/login/signup.php"
+    
+    elif "create account" in user_message or user_message in ["1", "4", "5", "6", "7", "8"]:
+        return ('👨‍🎓 <a href="https://e-tesda.gov.ph/login/signup.php" target="_blank">'
+                '<b>Create an Account</b></a> 🔗')
+
     elif "courses" in user_message or user_message == "2":
-        return "📝 Sure! Explore the available courses here: https://e-tesda.gov.ph/course"
+        return ('📝 <a href="https://e-tesda.gov.ph/course" target="_blank">'
+                '<b>View Available Courses</b></a> 📚')
+
     elif "talk to agent" in user_message or user_message == "3":
         return "📞 Okay, I’m connecting you to our human support staff."
     else:
-        return "❓ Sorry, I didn’t understand that. Please choose an option below or type 'help'."
+        return "❓ Sorry, I didn’t understand that. Please choose an option below or type 'help'.
 
     
 # --------------------------
@@ -152,8 +158,9 @@ for entry in st.session_state.messages:
             unsafe_allow_html=True,
         )
     else:
-        st.markdown(
-            f"<div style='background-color:#E6E6FA; padding:10px; border-radius:15px; margin:5px; text-align:left;'>"
-            f"🤖 <b>{role}:</b> {msg}</div>",
-            unsafe_allow_html=True,
-        )
+    st.markdown(
+        f"""<div style='background-color:#E6E6FA; padding:10px; border-radius:15px; margin:5px; text-align:left;'>
+            🤖 <b>{role}:</b> {msg}
+        </div>""",
+        unsafe_allow_html=True,
+    )
