@@ -28,10 +28,9 @@ def chatbot_response(user_message: str) -> str:
 
     elif "talk to agent" in user_message or user_message == "3":
         return "📞 Okay, I’m connecting you to our human support staff."
-    
-    else:
-        return "❓ Sorry, I didn’t understand that. Please choose an option below or type 'help'.
 
+    else:
+        return "❓ Sorry, I didn’t understand that. Please choose an option below or type 'help'."
     
 # --------------------------
 # Page config and session
