@@ -23,7 +23,7 @@ def chatbot_response(user_message: str) -> str:
                 '<b>List of Assessment Fees</b></a> 🔗')
         
     elif user_message in ["assessment center", "center"]:
-        return ('🏛 <a href="https://www.tesda.gov.ph/AssessmentCenters/" target="_blank">'
+        return ('🏛 <a href="https://www.tesda.gov.ph/TVI" target="_blank">'
                 '<b>List of Assessment Centers</b></a> 🔗')
 
     elif user_message in ["training center", "training"]:
