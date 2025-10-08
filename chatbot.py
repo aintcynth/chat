@@ -113,17 +113,6 @@ if st.session_state.last_action:
 elif chat_in:
     user_input = chat_in
     
-except Exception:
-    # fallback to text_input with a session_state key so we can clear it after processing
-    if user_input is None:
-        # use a session key so we can reset it safely
-        if "typed_value" not in st.session_state:
-            st.session_state.typed_value = ""
-        typed = st.text_input("Type your message here:", value=st.session_state.typed_value, key="typed_value")
-        # Only process if not empty and not same as last processed (to avoid reprocessing)
-        if typed and (len(st.session_state.messages) == 0 or st.session_state.messages[-1] != ("You", typed)):
-            user_input = typed
-
 # --------------------------
 # Process a single user_input (if any)
 # --------------------------
