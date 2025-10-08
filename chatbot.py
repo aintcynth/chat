@@ -158,9 +158,9 @@ for entry in st.session_state.messages:
             unsafe_allow_html=True,
         )
     else:
-    st.markdown(
-        f"""<div style='background-color:#E6E6FA; padding:10px; border-radius:15px; margin:5px; text-align:left;'>
+        st.markdown(
+            f"""<div style='background-color:#E6E6FA; padding:10px; border-radius:15px; margin:5px; text-align:left;'>
             🤖 <b>{role}:</b> {msg}
-        </div>""",
-        unsafe_allow_html=True,
-    )
+            </div>""",
+            unsafe_allow_html=True,
+        )
