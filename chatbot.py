@@ -17,8 +17,12 @@ def chatbot_response(user_message: str) -> str:
     
     if user_message in ["hi", "hello", "hey", "start"]:
         return "👋 Hello! How can I help you today?"
+
+    elif user_message in ["assessment fee", "fee"]:
+        return ('💲 <a href="https://www.tesda.gov.ph/Download/AssessmentFees" target="_blank">'
+                '<b>List of Assessment Fees</b></a> 🔗')
     
-    elif "create account" in user_message or user_message in ["1", "4", "5", "6", "7", "8"]:
+    elif "courses" in user_message or user_message == "1":
         return ('👨‍🎓 <a href="https://e-tesda.gov.ph/login/signup.php" target="_blank">'
                 '<b>Create an Account</b></a> 🔗')
 
