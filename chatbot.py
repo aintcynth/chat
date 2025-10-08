@@ -21,7 +21,15 @@ def chatbot_response(user_message: str) -> str:
     elif user_message in ["assessment fee", "fee"]:
         return ('💲 <a href="https://www.tesda.gov.ph/Download/AssessmentFees" target="_blank">'
                 '<b>List of Assessment Fees</b></a> 🔗')
-    
+        
+    elif user_message in ["assessment center", "center"]:
+        return ('🏛 <a href="https://www.tesda.gov.ph/AssessmentCenters/" target="_blank">'
+                '<b>List of Assessment Centers</b></a> 🔗')
+
+    elif user_message in ["training center", "training"]:
+        return ('🛠 <a href="https://www.tesda.gov.ph/AssessmentCenters/" target="_blank">'
+                '<b>List of Training Centers</b></a> 🔗')
+        
     elif "courses" in user_message or user_message == "1":
         return ('👨‍🎓 <a href="https://e-tesda.gov.ph/login/signup.php" target="_blank">'
                 '<b>Create an Account</b></a> 🔗')
