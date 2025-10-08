@@ -99,18 +99,20 @@ if col4.button("🔄 Reset Chat", on_click=reset_chat):
 user_input = None
 
 # If a button was clicked (last_action set), consume it exactly once
+# Always show the chat input
+chat_in = None
+try:
+    chat_in = st.chat_input("Type your message here...")
+except Exception:
+    pass
+
+# Prioritize button click (last_action), then chat input
 if st.session_state.last_action:
     user_input = st.session_state.last_action
-    # clear it immediately so it won't repeat on next run
     st.session_state.last_action = None
-
-# Try to use chat_input (Streamlit >= 1.25). If not available, fall back to text_input.
-try:
-    # chat_input returns a value only when user submits
-    if user_input is None:
-        chat_in = st.chat_input("Type your message here...")
-        if chat_in:
-            user_input = chat_in
+elif chat_in:
+    user_input = chat_in
+    
 except Exception:
     # fallback to text_input with a session_state key so we can clear it after processing
     if user_input is None:
