@@ -2,7 +2,7 @@ import streamlit as st
 import time
 
 # Use the TESDA logo URL or local path here (replace with your path or URL)
-TESDA_LOGO_URL = "https://www.tesda.gov.ph/images/logo.png"
+TESDA_LOGO_URL = "logo.png"
 
 # --------------------------
 # Simple rule-based chatbot function (unchanged)
@@ -79,15 +79,11 @@ with st.sidebar:
 # --------------------------
 # Top title with fixed TESDA logo
 # --------------------------
-st.markdown(
-    f"""
-    <div style='text-align: center;'>
-        <img src="{TESDA_LOGO_URL}" alt="TESDA Logo" style="width: 100px; height: auto; margin-bottom: 10px;" />
-        <h1 style="color: #1E90FF;">TESDA Cagayan Chatbot</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+col_logo, col_title, col_space = st.columns([1, 5, 1])
+with col_logo:
+    st.image(TESDA_LOGO_URL, width=80)
+with col_title:
+    st.markdown("## TESDA Cagayan Chatbot")
 st.write("Interact with the chatbot by typing or using quick action buttons below.")
 
 # --------------------------
