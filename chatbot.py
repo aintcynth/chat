@@ -81,7 +81,7 @@ with st.sidebar:
 # --------------------------
 col_logo, col_title, col_space = st.columns([1, 5, 1])
 with col_logo:
-    st.image(TESDA_LOGO_URL, width=120, background-repeat: no-repeat)
+    st.image(TESDA_LOGO_URL, width=120)
 with col_title:
     st.markdown("## TESDA Cagayan Chatbot")
 st.write("Interact with the chatbot by typing or using quick action buttons below.")
