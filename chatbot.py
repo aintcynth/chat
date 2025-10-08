@@ -30,7 +30,7 @@ def chatbot_response(user_message: str) -> str:
         return ('🛠 <a href="https://www.tesda.gov.ph/AssessmentCenters/" target="_blank">'
                 '<b>List of Training Centers</b></a> 🔗')
         
-    elif "courses" in user_message or user_message == "1":
+    elif "create account" in user_message or user_message == "1":
         return ('👨‍🎓 <a href="https://e-tesda.gov.ph/login/signup.php" target="_blank">'
                 '<b>Create an Account</b></a> 🔗')
 
