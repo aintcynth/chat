@@ -7,6 +7,11 @@ TESDA_LOGO_URL = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwg
 # --------------------------
 # Simple rule-based chatbot function (unchanged)
 # --------------------------
+
+def reset_chat():
+    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA Chatbot. Type 'help' to see options.")]
+    st.session_state.last_action = None
+    
 def chatbot_response(user_message: str) -> str:
     user_message = (user_message or "").lower().strip()
     if user_message in ["hi", "hello", "hey", "start"]:
@@ -20,9 +25,6 @@ def chatbot_response(user_message: str) -> str:
     else:
         return "❓ Sorry, I didn’t understand that. Please choose an option below or type 'help'."
 
-def reset_chat():
-    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA Chatbot. Type 'help' to see options.")]
-    st.session_state.last_action = None
     
 # --------------------------
 # Page config and session
