@@ -179,3 +179,15 @@ for entry in st.session_state.messages:
             </div>""",
             unsafe_allow_html=True,
         )
+
+# --------------------------
+# Footer with kayang_kaya.png
+# --------------------------
+st.markdown(
+    """
+    <div style='position: fixed; bottom: 10px; width: 100%; text-align: center;'>
+        <img src='kayang_kaya.png' alt='Kayang Kaya' width='120'>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
