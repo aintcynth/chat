@@ -84,7 +84,9 @@ with st.sidebar:
     st.markdown("""
     - 👋 Greet the bot
     - 👨‍🎓 Create an account  
-    - 📝 View courses  
+    - 💲  View Assessment Fees
+    - 🏛 View Assessment Centers
+    - 🛠 View courses  
     - 📞 Talk to a human agent  
     """)
 
