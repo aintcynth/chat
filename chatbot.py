@@ -23,11 +23,11 @@ def chatbot_response(user_message: str) -> str:
                 '<b>List of Assessment Fees</b></a> 🔗')
         
     elif user_message in ["assessment center", "center"]:
-        return ('🏛 <a href="https://www.tesda.gov.ph/TVI" target="_blank">'
+        return ('🏛 <a href="https://sites.google.com/tesda.gov.ph/tesdacagayanprovincialoffice/program-services/assessment-centers" target="_blank">'
                 '<b>List of Assessment Centers</b></a> 🔗')
 
     elif user_message in ["training center", "training"]:
-        return ('🛠 <a href="https://sites.google.com/tesda.gov.ph/tesdacagayanprovincialoffice/program-services/assessment-centers" target="_blank">'
+        return ('🛠 <a href="https://sites.google.com/tesda.gov.ph/tesdacagayanprovincialoffice/program-services/utpras" target="_blank">'
                 '<b>List of Training Centers</b></a> 🔗')
         
     elif "create account" in user_message or user_message == "1":
